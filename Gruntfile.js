@@ -584,7 +584,7 @@ module.exports = function(grunt) {
           const configuration = TRAVIS_BUILD_NUMBER ? 'production' : 'development';
           return [
             `cd webapp`,
-            `../node_modules/.bin/ng build --configuration=${configuration} --progress=${TRAVIS_BUILD_NUMBER ? 'false' : 'true'}`,
+            `node --max_old_space_size=4096 ../node_modules/.bin/ng build --configuration=${configuration} --progress=${TRAVIS_BUILD_NUMBER ? 'false' : 'true'}`,
             `../node_modules/.bin/ngc`,
             'cd ../',
           ].join(' && ');
@@ -595,7 +595,7 @@ module.exports = function(grunt) {
         cmd: () => {
           const configuration = TRAVIS_BUILD_NUMBER ? 'production' : 'development';
           return `
-            cd webapp && ../node_modules/.bin/ng build --configuration=${configuration} --watch=true &
+            cd webapp && node --max_old_space_size=4096 ../node_modules/.bin/ng build --configuration=${configuration} --watch=true &
             cd ../
           `;
         },
