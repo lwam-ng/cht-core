@@ -34,3 +34,5 @@ config/*/users.csv
 /**/*/.snapshots/local.json
 tests/integration/results/
 allure*
+forms/
+.snapshots/
