@@ -1113,8 +1113,8 @@ module.exports = function(grunt) {
   grunt.registerTask('dev-webapp-no-dependencies', 'Build and deploy the webapp for dev, without reinstalling dependencies.', [
     'build-dev',
     'deploy',
-    'exec:watch-webapp',
-    'watch',
+    //'exec:watch-webapp',
+    //'watch',
   ]);
 
   grunt.registerTask('dev-api', 'Run api and watch for file changes', [
