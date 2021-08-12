@@ -3,11 +3,11 @@ const fs = require('fs');
 const logger = require('../logger');
 const path = require('path');
 const BRANDING_ID = 'branding';
-const appTitle = 'Medic Mobile';
+const appTitle = 'Joyful Motherhood';
 
 const logo = {
   name: 'logo',
-  file: 'medic-logo-light-full.svg',
+  file: 'jm_logo.svg',
   type: 'image/svg+xml',
   dir: 'logo'
 };

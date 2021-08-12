@@ -90,10 +90,10 @@ describe('ResourceIcons service', () => {
     it('should return img when branding doc already cached', fakeAsync(() => {
       const brandingDoc = {
         resources: {
-          logo: 'medic-logo-light-full.svg'
+          logo: 'jm_logo.png.svg'
         },
         _attachments: {
-          'medic-logo-light-full.svg': {
+          'jm_logo.png.svg': {
             content_type: 'image/svg+xml',
             data: 'TguMzJsMi4xNT'
           }

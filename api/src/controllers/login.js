@@ -194,11 +194,11 @@ const setCookies = (req, res, sessionRes) => {
 const getInlineImage = (data, contentType) => `data:${contentType};base64,${data}`;
 
 const getDefaultBranding = () => {
-  const logoPath = path.join(__dirname, '..', 'resources', 'logo', 'medic-logo-light-full.svg');
+  const logoPath = path.join(__dirname, '..', 'resources', 'logo', 'jm_logo.svg');
   return promisify(fs.readFile)(logoPath, {}).then(logo => {
     const data = Buffer.from(logo).toString('base64');
     return {
-      name: 'Medic Mobile',
+      name: 'Joyful Motherhood',
       logo: getInlineImage(data, 'image/svg+xml')
     };
   });
